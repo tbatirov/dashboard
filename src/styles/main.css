@@ -1,0 +1,51 @@
+@import url("/node_modules/gridstack/dist/gridstack.min.css");
+
+@import "@/styles/shadcn.css";
+
+@layer base {
+    html, body { @apply inset-0 p-0 m-0 leading-none scroll-smooth; }
+    .flex-all-center { @apply flex justify-center items-center; };
+    .not-found-section { @apply w-screen h-screen flex-all-center text-xl; }
+    .loading-section { @apply w-screen h-screen flex-all-center; }
+    .loading-icon { @apply size-[4rem]; }
+    .content-section { @apply w-screen h-screen flex-all-center flex-col divide-y divide-border; }
+    .navbar-section { @apply w-full flex gap-[0.4rem] p-[0.5rem]; }
+    .navbar-button { @apply gap-[0.5rem]; }
+    .navbar-button-icon { @apply size-[1rem]; }
+    .grid-section { @apply w-full h-full bg-muted overflow-auto p-[0.25rem]; }
+    .grid-stack-item { @apply w-full h-full; }
+    .grid-stack-item-content { @apply flex flex-col bg-background border border-border rounded-[0.5rem]; }
+    .dashlet-header { @apply w-full h-[2.0rem] flex justify-between items-center border-b border-border p-[0.5rem]; }
+    .dashlet-title { @apply w-full text-primary text-base font-medium truncate; }
+    .dashlet-content { @apply size-full p-[0.5rem]; }
+    .dashlet-menu-item { @apply flex items-center text-lg gap-[0.4rem]; }
+    .dashlet-menu-icon { @apply size-[1rem] text-primary; }
+    .form-field { @apply flex flex-col gap-[0.25rem]; }
+    .field-label { @apply !text-base; }
+    .multi-selector-fields { @apply flex flex-col items-center gap-[0.4rem]; }
+    .multi-selector-field { @apply w-full flex items-center gap-[0.4rem]; }
+    .multi-selector-delete-btn { @apply !aspect-square !p-0; }
+    .filter-label { @apply text-gray-700 font-medium mb-2; }
+    .filter-fields { @apply space-y-2; }
+    .filter-field { @apply flex justify-center gap-2 items-center; }
+    .filter-grid { @apply w-full grid grid-cols-[5fr_1fr_5fr] gap-2; }
+    .filter-input { @apply w-full p-2 border border-gray-300 rounded; }
+    .operator-trigger { @apply !justify-center !p-0; }
+    .filter-delete-btn { @apply !aspect-square !p-0; }
+    .card-content { @apply w-full h-full flex justify-between items-end; }
+    .card-value { @apply text-primary text-2xl font-medium truncate; }
+    .line-content { @apply w-full h-full; }
+    .table-scroll { @apply h-full border border-border rounded-[0.5rem]; }
+    .table-header { @apply bg-muted border-b border-border; }
+    .table-head { @apply min-w-[8rem]; }
+}
+
+html, body {
+    font-style: normal;
+}
+
+.grid-stack-placeholder > .placeholder-content {
+    background-color: transparent !important;
+    border: 2px dashed hsl(var(--muted-foreground) / .3);
+    border-radius: var(--radius);
+}
